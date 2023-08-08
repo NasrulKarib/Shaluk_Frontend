@@ -24,7 +24,7 @@ const Login = () => {
     }
     const handleSubmit = async e => {
         e.preventDefault();
-        const res = await axios.post("http://localhost:3001/login",loginInfo)
+        const res = await axios.post("https://shaluk-backend.vercel.app/login",loginInfo)
         .then((res)=> {
             setLoginfo({
                 email : "",

@@ -15,7 +15,7 @@ const Profile = () => {
   
   const user_id = userinfo?.id
   useEffect(()=> {
-      const res = axios.post("http://localhost:3001/user-profile",{user_id})
+      const res = axios.post("https://shaluk-backend.vercel.app/user-profile",{user_id})
       .then((res)=> {
         setUser(res.data.user[0])
       })
@@ -31,7 +31,7 @@ const Profile = () => {
     errorToast("Please filled out all the field")
   }
   else {
-    const res = await axios.put("http://localhost:3001/update-profile",{user_id,address,name,phone_number},{headers})
+    const res = await axios.put("https://shaluk-backend.vercel.app/update-profile",{user_id,address,name,phone_number},{headers})
     .then((res)=> {
       if(res.data.message==="Successfully updated user profile") {
         successToast(res.data.message)

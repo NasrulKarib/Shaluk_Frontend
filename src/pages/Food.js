@@ -8,10 +8,10 @@ const Food = () => {
     const [allShops,setAllShops] = useState([])
     const [foodProducts,setFoodProducts] = useState([])
     useEffect(()=> {
-      const res = axios.get("http://localhost:3001/all-food-shops")
+      const res = axios.get("https://shaluk-backend.vercel.app/all-food-shops")
       .then((res)=> {
         setAllShops(res.data.shops)
-        return axios.get("http://localhost:3001/food-products")
+        return axios.get("https://shaluk-backend.vercel.app/food-products")
       })
       .then((res)=> {
          setFoodProducts(res.data.products)

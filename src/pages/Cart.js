@@ -60,7 +60,7 @@ const Cart = () => {
         const quantity = cartProducts[0].quantity;
         const price = cartProducts[0].product_price
         const user_id = userinfo.id
-        const res = await axios.post("http://localhost:3001/place-order",{product_id,quantity,price,user_id},{headers})
+        const res = await axios.post("https://shaluk-backend.vercel.app/place-order",{product_id,quantity,price,user_id},{headers})
         .then((res)=> {
             if(res.data.message==="Order is placed Successfully") {
                 successToast(res.data.message)

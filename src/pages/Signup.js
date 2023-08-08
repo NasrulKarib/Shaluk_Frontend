@@ -26,7 +26,7 @@ const Signup = () => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3001/register",signupInfo)
+    const res = await axios.post("https://shaluk-backend.vercel.app/register",signupInfo)
     .then((res)=> {
         console.log(res.data.message)
         if(res.data.message==="User is created Successfully") {

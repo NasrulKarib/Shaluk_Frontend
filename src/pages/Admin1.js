@@ -39,7 +39,7 @@ const Admin1 = () => {
 
   const handleSubmit = async e => {
       // console.log(shopInfo)
-      const res = await axios.post("http://localhost:3001/add-shop",shopInfo,{headers})
+      const res = await axios.post("https://shaluk-backend.vercel.app/add-shop",shopInfo,{headers})
       .then((res)=> {
             console.log(res.data)
             if(res.data.message==="Shop is added Successfully") {

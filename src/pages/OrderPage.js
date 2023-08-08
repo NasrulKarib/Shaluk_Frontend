@@ -22,7 +22,7 @@ const OrderPage = () => {
             navigate("/login")
         } else { 
         const user_id = userinfo.id;
-        const res = axios.post("http://localhost:3001/order-by-a-particular-user",{user_id},{headers})
+        const res = axios.post("https://shaluk-backend.vercel.app/order-by-a-particular-user",{user_id},{headers})
         .then((res)=> {
             console.log(res.data.orders)
             setOrders(res.data.orders)

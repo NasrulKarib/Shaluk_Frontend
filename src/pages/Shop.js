@@ -10,7 +10,7 @@ const Shop = () => {
   const searchParams = new URLSearchParams(location.search);
   const shop_name = searchParams.get('s');
  useEffect(()=> {
-  const res = axios.post("http://localhost:3001/products-by-a-specific-shop",{shop_name})
+  const res = axios.post("https://shaluk-backend.vercel.app/products-by-a-specific-shop",{shop_name})
   .then((res)=> {
     setProducts(res.data.products)
   })

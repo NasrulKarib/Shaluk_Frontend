@@ -21,7 +21,7 @@ const Admin3 = () => {
             if(userinfo?.role!=="admin") {
               navigate("/login")
             }
-       const res = axios.get("http://localhost:3001/get-all-orders",{headers})
+       const res = axios.get("https://shaluk-backend.vercel.app/get-all-orders",{headers})
        .then((res)=> {
           setOrders(res.data.orders)        
        })
@@ -29,7 +29,7 @@ const Admin3 = () => {
 
       const handleOrderStatusChange = async (order_id) => {
             console.log(order_id)
-            const res = await axios.put("http://localhost:3001/change-order-status",{order_id},{headers})
+            const res = await axios.put("https://shaluk-backend.vercel.app/change-order-status",{order_id},{headers})
             .then((res)=> {
                   console.log(res.data)
                   if(res.data.message==="Successfully updated order status") {

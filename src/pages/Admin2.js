@@ -19,7 +19,7 @@ const Admin2 = () => {
       if(userinfo?.role!=="admin") {
             navigate("/login")
       }
-         const res =  axios.get("http://localhost:3001/all-shops")
+         const res =  axios.get("https://shaluk-backend.vercel.app/all-shops")
          .then((res)=> {
             setAllShops(res.data.shops)
          })
@@ -59,7 +59,7 @@ const Admin2 = () => {
           console.log(productInfo)
           if(shop_id.length===0) {
             let shop_id = allShops[0].shop_id;
-            const res =await axios.post("http://localhost:3001/add-product",{
+            const res =await axios.post("https://shaluk-backend.vercel.app/add-product",{
                product_name,
                product_description,
                product_price,
@@ -82,7 +82,7 @@ const Admin2 = () => {
                   }
             })
           } else {
-            const res = await axios.post("http://localhost:3001/add-product",productInfo,{headers})
+            const res = await axios.post("https://shaluk-backend.vercel.app/add-product",productInfo,{headers})
                .then((res)=> {
                   console.log(res.data)
                      if(res.data.message==="Product is added Successfully") {

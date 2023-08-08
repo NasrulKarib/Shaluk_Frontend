@@ -15,10 +15,10 @@ const Home = () => {
   const [medicineProducts,setMedicineProducts] = useState([])
   const [foodProducts,setFoodProducts] = useState([])
   useEffect(()=> {
-  const res = axios.get("http://localhost:3001/medicine-products")
+  const res = axios.get("https://shaluk-backend.vercel.app/medicine-products")
   .then((res)=> {
     setMedicineProducts(res.data.products)
-    return axios.get("http://localhost:3001/food-products")
+    return axios.get("https://shaluk-backend.vercel.app/food-products")
   })
   .then((res)=> {
     setFoodProducts(res.data.products)
