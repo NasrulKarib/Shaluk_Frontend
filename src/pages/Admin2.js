@@ -40,7 +40,7 @@ const Admin2 = () => {
           const file = e.target.files[0];
           const formData = new FormData();
           formData.append("image",file);
-          await axios.post("http://api.imgbb.com/1/upload?key=87b7ec1ad2930bf60fd72ea5d3f9d10b",formData)
+          await axios.post("https://api.imgbb.com/1/upload?key=87b7ec1ad2930bf60fd72ea5d3f9d10b",formData)
           .then((res)=> {
             console.log(res.data.data)
             setProductInfo((prev)=> ({
