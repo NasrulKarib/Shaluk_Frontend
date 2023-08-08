@@ -157,7 +157,7 @@ const Admin3 = () => {
                                           order_status === "Pending" ? 
                                           <button onClick={()=>handleOrderStatusChange(order_id)} class="order_now">
                                           Confirm order
-                                          </button>  :  <button class="order_now" data-label="order">{order_status}</button>
+                                          </button>  :  <button class="order_now">{order_status}</button>
                                          }
                                           </td>
                                          </tr>
