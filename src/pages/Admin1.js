@@ -105,7 +105,7 @@ const Admin1 = () => {
                         <div class="p_name">
                         Shop name:
                         </div>
-                        <input class="name_text" name="shop_name" value={shop_name} onChange={handleChange} type="text" placeholder=""/>
+                        <input class="name_text" required name="shop_name" value={shop_name} onChange={handleChange} type="text" placeholder=""/>
                         
                   </div>
 
@@ -114,7 +114,7 @@ const Admin1 = () => {
                         Shop Type:
                         </div>
 
-                        <select name="shop_type" value={shop_type} onChange={handleChange} required class="shop_type">
+                        <select required name="shop_type" value={shop_type} onChange={handleChange} required class="shop_type">
                               <option value="Medicine">Medicine</option>
                               <option value="Food">Food</option>
 
@@ -127,7 +127,7 @@ const Admin1 = () => {
                         <div class="p_name">
                         Shop Address:
                         </div>
-                        <input class="name_text" name="shop_address" value={shop_address} onChange={handleChange} type="text" placeholder=""/>
+                        <input required class="name_text" name="shop_address" value={shop_address} onChange={handleChange} type="text" placeholder=""/>
                         
                   </div>
 
@@ -136,7 +136,7 @@ const Admin1 = () => {
                         <div class="p_name">
                         Mobile number:
                         </div>
-                        <input class="name_text" name="shop_number" value={shop_number} onChange={handleChange} type="text" placeholder=""/>
+                        <input required class="name_text" name="shop_number" value={shop_number} onChange={handleChange} type="text" placeholder=""/>
                         
                   </div>
 
